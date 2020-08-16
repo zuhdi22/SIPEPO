@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sistem Keuangan Pondok">
+    <meta name="author" content="Ahmad zuhdi Alwan">
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <title>SIPEPO (Sistem Pencatatan Keuangan Pondok)</title>
+<script language="JavaScript">
+var tanggallengkap = new String();
+var namahari = ("Minggu Senin Selasa Rabu Kamis Jumat Sabtu");
+namahari = namahari.split(" ");
+var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+namabulan = namabulan.split(" ");
+var tgl = new Date();
+var hari = tgl.getDay();
+var tanggal = tgl.getDate();
+var bulan = tgl.getMonth();
+var tahun = tgl.getFullYear();
+tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+
+  var popupWindow = null;
+  function centeredPopup(url,winName,w,h,scroll){
+  LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+  TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+  settings ='height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+  popupWindow = window.open(url,winName,settings)
+}
+</script>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="dist/js/jquery-1.9.1.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body background="banner-bg.png">
+
+    <div class="container">
+<!-- role="form" -->
+      <form class="form-signin" method="post" action="proseslogin.php">
+        <h2 class="form-signin-heading"><center><span class="glyphicon glyphicon-th-large"></span> Selamat datang di Halaman Login</center></h2>
+        <h5 class="baru"> Aplikasi Sistem Pencatatan Keuangan Pondok Pesantren Durrotu Aswaja </h5>
+        <input name="user" id="user" type="input" class="form-control" placeholder="Nama" >
+        <input name="pass" id="pass" type="password" class="form-control" placeholder="Password" required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Ingat saya
+        </label>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Masuk</button>
+      <br>
+    <class="btn btn-lg btn-success btn-block"><a href="cari.php">
+      <center><botton class= "btn btn-lg btn-success btn-block" type=submit>
+        Cari Data Pembayaran </a></botton></center>
+     </form>
+    </div>
+     <!-- /container -->
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Hubungi kami</h4>
+      </div>
+      <div class="modal-body">
+      dibuat oleh Ahmad Zuhdi Alwan dibantu Mas Wildan Udinus
+      <table>
+      <tr>
+      <td>No Telepon / WA</td> <td>:</td> <td>0895 3733 00 659</td>
+      </tr>
+      <br />
+      <tr>
+      <td>E-mail</td><td>:</td> <td><a href="zuhdialwan22@gmail.com">zuhdialwan22@gmail.com</a> | <a href="zuhdialwan22@gmail.com">zuhdialwan92@gmail.com</a></td>
+      </tr>
+      <br />
+      <tr>
+      <td>Youtube</td> <td>:</td> <td><a href="https://www.youtube.com/channel/UCjIHuJD3v9_mq_fN-zUlKUQ?view_as=subscriber" target="_blank">Zuhdi Alwan</a></td>
+      </tr>
+      <br />
+      <tr>
+      <td>Instagram</td>    <td>:</td> <td><a href="https://www.instagram.com/zuhdiachmed/" target="_blank">zuhdi achmed</a></td>
+      </tr>
+       </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Keluar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end dialog modal -->
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <br />
+    <br />
+
+
+    <center><h5 class="form-signin">Copyright &copy; <a href="#" data-toggle="modal" data-target="#contact">Ahmad Zuhdi Alwan</a></h5></center>
+
+  </body>
+</html>
